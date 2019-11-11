@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node -r module-alias/register src/main.ts",
-    "start:prod": "node -r module-alias/register dist/main.js",
+    "start": "ts-node src/main.ts",
+    "start:prod": "node dist/main.js",
     "test": "ava",
     "coverage": "nyc ava",
     "lint": "tslint --format stylish src/**/*.ts",
@@ -59,8 +59,5 @@
     ],
     "cache": false,
     "sourceMap": true
-  },
-  "_moduleAliases": {
-    "~": "dist"
   }
 }
