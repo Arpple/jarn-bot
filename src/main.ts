@@ -27,7 +27,7 @@ const volforce = async () => {
 }
 
 const setStatus = (vf) => {
-	client.user.setActivity(`VF ${vf}`, { type: "PLAYING" })
+	client.user.setActivity(`VFs ${vf}`, { type: "PLAYING" })
 }
 
 const checkVolforce = async () => {
