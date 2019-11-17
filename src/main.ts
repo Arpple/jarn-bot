@@ -36,6 +36,14 @@ const checkVolforce = async () => {
 	setTimeout(checkVolforce, hour)
 }
 
+const searchAndFilter = (html: string, keyword: string) => {
+	return Search.tracks(html)
+		.filter((x) => {
+			const str = x.toLowerCase()
+			return str.includes(keyword.toLowerCase())
+		})
+}
+
 const search = async (message: Message) => {
 	const msg = message.content
 		.replace("!lv", "")
@@ -43,15 +51,16 @@ const search = async (message: Message) => {
 
 	const split = msg.split(" ")
 	const lv = parseInt(split[0])
-	const keyword = split.slice(1).join(" ")
 
 	const url = Search.url(lv)
 	const html: string = (await req(url)) as string
-	return Search.tracks(html)
-		.filter((x) => {
-			const str = x.toLowerCase()
-			return str.includes(keyword.toLowerCase())
-		})
+
+	if (split.length < 2)
+		return Search.tracks(html)
+
+	const keyword = split.slice(1).join(" ")
+
+	return searchAndFilter(html, keyword)
 }
 
 client.on("ready", () => {
