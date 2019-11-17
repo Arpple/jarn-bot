@@ -1,37 +1,27 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:latest", "tslint-immutable", "tslint-config-prettier"],
+  "extends": [
+    "tslint:latest",
+    "tslint-immutable",
+    "tslint-config-prettier"
+  ],
   "rules": {
     "member-ordering": false,
-
     "no-any": false,
-
     "no-empty-interface": {
       "severity": "warning"
     },
-
     "no-import-side-effect": false,
-
     "no-inferrable-types": false,
-
     "no-magic-numbers": false,
-
     "no-namespace": false,
-
     "no-non-null-assertion": true,
-
     "no-parameter-reassignment": true,
-
     "no-reference": true,
-
     "no-var-requires": true,
-
     "only-arrow-functions": true,
-
     "prefer-for-of": true,
-
     "await-promise": true,
-
     "typedef-whitespace": [
       true,
       {
@@ -42,89 +32,68 @@
         "variable-declaration": "nospace"
       }
     ],
-
     "ban-comma-operator": true,
-
-    "curly": [true, "as-needed"],
-
+    "curly": [
+      true,
+      "as-needed"
+    ],
     "function-constructor": true,
-
     "no-conditional-assignment": true,
-
     "no-console": false,
-
     "no-construct": true,
-
     "no-duplicate-switch-case": {
       "severity": "warning"
     },
-
     "no-duplicate-variable": true,
-
     "no-dynamic-delete": true,
-
     "no-empty": {
       "severity": "warning"
     },
-
     "no-eval": true,
-
-    "no-floating-promises": true,
-
+    "no-floating-promises": false,
     "no-inferred-empty-object-type": true,
-
     "no-misused-new": true,
-
     "no-null-keyword": true,
-
     "no-object-literal-type-assertion": true,
-
     "no-return-await": true,
-
     "no-shadowed-variable": true,
-
     "no-sparse-arrays": true,
-
     "no-string-literal": true,
-
     "no-string-throw": true,
-
     "no-this-assignment": true,
-
     "no-var-keyword": true,
-
     "no-unsafe-any": true,
-
     "no-unsafe-finally": true,
-
-    "no-unused-expression": [true, "warning"],
-
-    "no-unused-variable": [true, "warning"],
-
+    "no-unused-expression": [
+      true,
+      "warning"
+    ],
+    "no-unused-variable": [
+      true,
+      "warning"
+    ],
     "no-use-before-declare": true,
-
     "no-void-expression": true,
-
     "prefer-conditional-expression": true,
-
     "prefer-object-spread": true,
-
     "radix": false,
-
     "restrict-plus-operands": true,
-
     "use-isnan": true,
-
     "triple-equals": true,
-
-    "array-type": [true, "array"],
-
-    "indent": [true, "tabs", 2],
-
-    "linebreak-style": [true, "LF"],
-
+    "array-type": [
+      true,
+      "array"
+    ],
+    "indent": [
+      true,
+      "tabs",
+      2
+    ],
+    "linebreak-style": [
+      true,
+      "LF"
+    ],
     "prefer-const": true,
-
     "trailing-comma": [
       true,
       {
@@ -136,63 +105,50 @@
         }
       }
     ],
-
     "arrow-parens": true,
-
     "arrow-return-shorthand": true,
-
     "class-name": true,
-
     "encoding": true,
-
     "import-spacing": true,
-
     "interface-name": false,
-
     "no-irregular-whitespace": true,
-
     "no-trailing-whitespace": true,
-
-    "object-literal-key-quotes": [true, "consistent-as-needed"],
-
+    "object-literal-key-quotes": [
+      true,
+      "consistent-as-needed"
+    ],
     "object-literal-sort-keys": false,
-
     "interface-over-type-literal": false,
-
     "one-variable-per-declaration": true,
-
     "ordered-imports": true,
-
-    "quotemark": [true, "double"],
-
-    "semicolon": [true, "never"],
-
+    "quotemark": [
+      true,
+      "double"
+    ],
+    "semicolon": [
+      true,
+      "never"
+    ],
     "space-before-function-paren": [
       true,
       {
         "asyncArrow": "always"
       }
     ],
-
-    "space-within-parens": [true, 0],
-
+    "space-within-parens": [
+      true,
+      0
+    ],
     "switch-final-break": true,
-
     "no-implicit-dependencies": false,
-
     "eofline": true,
-
     "newline-per-chained-call": false,
-
     "one-line": false,
-
     "no-submodule-imports": false,
-
     "readonly-keyword": true,
     "no-object-mutation": true,
     "no-delete": true,
     "no-method-signature": true,
-
     "no-this": true,
     "no-class": true,
     "no-mixed-interface": false
