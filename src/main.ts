@@ -10,6 +10,7 @@ const client = new Discord.Client()
 
 const token = process.env.TOKEN
 const cookie = process.env.COOKIE
+const listenChannel = process.env.CHANNEL
 
 const req = request.defaults({ jar: true })
 const hour = 60 * 60 * 1000
@@ -69,6 +70,9 @@ client.on("ready", () => {
 
 client.on("message", async (message) => {
 	if (message.author.bot)
+		return
+
+	if (listenChannel && listenChannel !== message.channel.id)
 		return
 
 	if (message.content.startsWith("!lv")) {
