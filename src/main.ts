@@ -39,7 +39,7 @@ const checkVolforce = async () => {
 const searchAndFilter = (html: string, keyword: string) => {
 	return Search.tracks(html)
 		.filter((x) => {
-			const str = x.toLowerCase()
+			const str = x.name.toLowerCase()
 			return str.includes(keyword.toLowerCase())
 		})
 }
@@ -74,7 +74,7 @@ client.on("message", async (message) => {
 	if (message.content.startsWith("!lv")) {
 		const tracks = await search(message)
 		if (tracks.length > 0)
-			message.channel.send(tracks.join("\n").substr(0, 2000))
+			message.channel.send(tracks.map(Search.trackString).join("\n").substr(0, 2000))
 		else
 			message.channel.send("Not Found :jarnsweat:")
 	}
