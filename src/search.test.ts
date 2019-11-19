@@ -37,5 +37,5 @@ test("extract track from html <script>", (assert) => {
 
 test("convert to string", (assert) => {
 	const str = Search.trackString({ name: "Track", link: "sdvx.in/12" })
-	assert.is(str, "Track - sdvx.in/12")
+	assert.is(str, "[Track](sdvx.in/12)")
 })

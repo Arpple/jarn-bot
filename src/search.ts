@@ -28,6 +28,6 @@ export namespace Search {
 			.filter(Util.isDefined)
 	}
 
-	export const trackString = (track: Track): string =>
-		`${track.name} - ${track.link}`
+	export const trackString = (t: Track): string =>
+		`[${t.name}](${t.link})`
 }

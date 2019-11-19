@@ -77,10 +77,18 @@ client.on("message", async (message) => {
 
 	if (message.content.startsWith("!lv")) {
 		const tracks = await search(message)
-		if (tracks.length > 0)
-			message.channel.send(tracks.map(Search.trackString).join("\n").substr(0, 2000))
+		if (tracks.length > 0) {
+			const exampleEmbed = new Discord.RichEmbed()
+				.setColor("#0099ff")
+				.setTitle(`Search ${message}`)
+				.addField("Result", tracks.map(Search.trackString).join("\n"))
+
+			message.channel.send(exampleEmbed)
+		}
 		else
 			message.channel.send("Not Found :jarnsweat:")
+
+		return
 	}
 })
 
